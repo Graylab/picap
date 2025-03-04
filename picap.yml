@@ -1,0 +1,23 @@
+name: picap
+channels:
+  - conda-forge
+  - defaults
+  - https://conda.rosettacommons.org
+  - nvidia
+dependencies:
+  - python=3.9
+  - biopython=1.79
+  - pandas=1.2.4
+  - tqdm=4.59
+  - pyrosetta
+  - pip
+  - pip:
+    - Bio==1.6
+    - colorama==0.4.4
+    - fair_esm==2.0.0
+    - matplotlib==3.3.4
+    - numpy==1.20.1
+    - py3Dmol==2.4.2
+    - scipy==1.6.2
+    - torch==2.2.2
+    - torchvision
