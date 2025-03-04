@@ -12,7 +12,7 @@ Created on Jan 14 2025
 
 
 Usage: python run_both.py
-    --capsif_only [run capsif2 only | default: False]
+    --capsif2_only [run capsif2 only | default: False]
     --picap_only [run picap only | default: False]
     --high_plddt [run only on high_plddt residues (with > `plddt_cutoff`) only | default: False]
     --plddt_cutoff [cutoff for when `--high_plddt` invoked | default: 70]
@@ -73,7 +73,7 @@ def manage_flags(flags):
     #Get all flags all organized
     n = len(flags)
 
-    input_flags = ["--capsif_only","--picap_only",'--high_plddt','--plddt_cutoff','--single','--json','--help']
+    input_flags = ["--capsif2_only","--picap_only",'--high_plddt','--plddt_cutoff','--single','--json','--help']
 
     RUN_PICAP = True;
     RUN_CAP = True;
@@ -88,7 +88,7 @@ def manage_flags(flags):
                 kk = kk.lower()
                 ind = flags.index(kk);
 
-                if (kk == '--capsif_only'):
+                if (kk == '--capsif2_only'):
                     RUN_PICAP = False
                 if (kk == '--picap_only'):
                     RUN_CAP = False
@@ -252,7 +252,8 @@ def run_capsif2(TEST_PDB,TEST_CLUST,JSON=False):
             print(names[ii][0],end=":")
             if len(res_label[ii]) < 1:
                 print(' n/a',end='')
-                f.write('n/a')
+                if not JSON:
+                    f.write('n/a')
 
         for jj in range(len(res_label[ii])):
             if OUTPUT_INT_TO_CMD:
@@ -430,11 +431,11 @@ def run_it_all(RUN_CAP=True,RUN_PICAP=True,single=False,JSON=False):
             for jj in range(len(names_pi)):
                 mydict.update( { names_pi[jj][0] : {
                             'prot_pred': str(round(pi_pred[jj],4)) } } )
-        elif RUN_PICAP:
+        elif RUN_CAP:
             for ii in range(len(names_cap)):
                 txt = ''
                 for kk in range(len(cap_pred[ii])):
-                    txt += cap_pred[jj][kk][0] + ','
+                    txt += cap_pred[ii][kk][0] + ','
                 mydict.update( { names_cap[ii][0] : {
                             'res_pred': txt} } )
 
