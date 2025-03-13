@@ -2,7 +2,30 @@
 
 ![PiCAP](./picap_visual_abstract.jpg)
 
-## Quick Setup Guide ##
+## Installation
+
+### RosettaCommons PiCAP container
+
+##### Licensing
+The PiCAP protocol requires set of tools to run. To streamline this process, we provide a Docker container that includes all necessary applications pre-installed, offering a straightforward command-line interface for running the PiCAP protocol.
+
+Please note that the provided Docker image includes **PyRosetta** which **require a commercial license for non-academic use**. For more details, please refer to: [RosettaCommons](https://github.com/RosettaCommons/rosetta)
+
+### Running PiCAP Using the RosettaCommons Docker Container
+
+To run the application, use the `picap` or `capsif-2` scripts with same same command line options as `run_both.py` (see local install section below).
+
+#### Example Usage:
+```sh
+mkdir ./input_pdb
+mkdir ./output_data
+# copy your input files into input_pdb dir
+docker run -it -v ./input_pdb:/picap/input_pdb -v ./output_data:/picap/output_data rosettacommons/rosetta:picap --high_plddt --plddt_cutoff 70
+```
+
+For a full list of available options, run: `docker run -it rosettacommons/rosetta:picap picap --help`
+
+### Local Install
 ```
 mkdir pre_pdb
 mkdir output_data
