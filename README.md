@@ -2,7 +2,11 @@
 
 ![PiCAP](./picap_visual_abstract.jpg)
 
-## Installation
+## Proteome Data
+
+All data for the proteome analysis is available at : [`datasets/proteome_results.xlsx`]([https://data.graylab.jhu.edu/picap_capsif2/](https://github.com/Graylab/picap/tree/main/datasets)).
+
+## PiCAP + CAPSIF2 Installation
 
 ### RosettaCommons PiCAP container
 
