@@ -42,7 +42,7 @@ mkdir ./output_data
 docker run -it -v ./input_pdb:/picap/input_pdb -v ./output_data:/picap/output_data rosettacommons/apps:picap --high_plddt --plddt_cutoff 70
 ```
 
-For a full list of available options, run: `docker run -it rosettacommons/apps:picap picap --help`
+For a full list of available options, run: `docker run -it rosettacommons/picap picap --help`
 
 ### Local Install
 ```
