@@ -3,14 +3,15 @@
 ![PiCAP](./picap_visual_abstract.jpg)
 
 Official repository for Protein interaction of CArbohydrate Predictor (PiCAP) and CArbohydrate-Protein Site IdentiFier2 (CAPSIF2) from the paper: 
-[`Predictions from Deep Learning Propose Substantial Protein-Carbohydrate Interplay`](https://doi.org/10.1101/2025.03.07.641884)
+[`Predictions from Deep Learning Propose Substantial Protein-Carbohydrate Interplay`](https://www.pnas.org/doi/10.1073/pnas.2523342123)
 
 <details><summary><b>Citation</b></summary>
 Predictions from Deep Learning Propose Substantial Protein-Carbohydrate Interplay
 
 Samuel W Canner, Ronald L Schnaar, Jeffrey J Gray
 
-bioRxiv 2025.03.07.641884; doi: https://doi.org/10.1101/2025.03.07.641884
+PNAS 123 (21) e2523342123
+https://doi.org/10.1073/pnas.2523342123
 </details>
 
 Protein interaction of CArbohydrate Predictor (PiCAP) is deep learning model to predict whether a protein binds to a carbohydrate using a protein’s sequence and structure in tandem. PiCAP uses ESM2 embeddings and the input structure to identify if the protein has the capacity to bind to carbohydrates.
